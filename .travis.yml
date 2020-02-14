@@ -6,4 +6,4 @@ before_install:
     - docker build -t pjdeh/docker-react -f Dockerfile.dev .
 
 Script:
-    - docker run pjdeh/docker-react npm run test -- --coverage
+    - docker run -e CI=true pjdeh/docker-react npm run test
